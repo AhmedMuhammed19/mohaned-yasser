@@ -11,13 +11,16 @@ toggleBtn.addEventListener("change", (event) => {
   }
 });
 
-
-
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const phrases = ["UI Designer", "Visual identity Designer", "Freelancer"];
+const phrases = [
+  "Graphic Designer",
+  "UI Designer",
+  "Visual identity Designer",
+  "Freelancer",
+];
 const el = document.getElementById("type-writer");
 
 let sleepTime = 100;
