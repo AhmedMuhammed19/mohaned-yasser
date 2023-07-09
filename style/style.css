@@ -9,7 +9,7 @@ body {
   --button-color: #EA5455;
   --main-font-color: #161827;
   --secondary-font-color: #060047;
-  --landing-after-bg:#e4dccfbd;
+  --landing-after-bg:#e4dccf6c;
   --main-transition: 0.3s;
   
 }
@@ -19,7 +19,7 @@ body {
   --button-color: #EA5455;
   --main-font-color: #e4dccf;
   --secondary-font-color: #f9f5eb;
-  --landing-after-bg:#161827de;
+  --landing-after-bg:#161827c4;
 }
 a {
   text-decoration: none;
@@ -29,8 +29,9 @@ a {
 .landing {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 0 0;
   height: 100vh;
-  background-image: url(../images/landing.jpg);
+  background-image: url(../images/landingbg.jpg);
   background-attachment:fixed ;
 }
 .landing::after{
@@ -89,7 +90,14 @@ nav ul a {
 }
 @media (max-width: 500px) {
   nav ul a {
+    padding: 10px;
     font-size: 14px;
+  }
+}
+@media (max-width: 380px) {
+  nav ul a {
+    padding: 8px;
+    font-size: 13px;
   }
 }
 nav ul a.active ,nav ul a:hover {
@@ -107,7 +115,11 @@ nav ul a.active ,nav ul a:hover {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
-
+@media (max-width:500px) { .landing .night-mode{
+  width: 60px;
+  height: 30px;
+  
+}}
 .landing .night-mode svg{
   pointer-events: none;
   position: absolute;
@@ -128,6 +140,13 @@ nav ul a.active ,nav ul a:hover {
   -moz-transition: var(--main-transition);
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
+}
+@media (max-width:500px) {
+  .landing .night-mode svg{
+    width: 25px;
+    height: 15px;
+    top:8%
+  }
 }
 .night-mode .moon{
   opacity: 0;
@@ -151,6 +170,15 @@ opacity: 0;
   -ms-transform: translateX(40px) rotate(360deg) ;
   -o-transform: translateX(40px) rotate(360deg) ;
 }
+@media (max-width:500px) {
+  .night-mode input:checked +label svg{
+  transform: translateX(30px) rotate(360deg) ;
+  -webkit-transform: translateX(30px) rotate(360deg) ;
+  -moz-transform: translateX(30px) rotate(360deg) ;
+  -ms-transform: translateX(30px) rotate(360deg) ;
+  -o-transform: translateX(30px) rotate(360deg) ;
+}
+}
 .landing .landing-txt{
   width: 100%;
   text-align: center;
@@ -167,6 +195,31 @@ opacity: 0;
   font-size: 60px;
   font-weight: 400;
   margin: 0;
+}
+@media (max-width:776px) {
+  .landing-txt h1{
+    font-size: 50px;
+  }
+  .landing-txt .typing{
+    font-size: 35px;
+  }
+}
+@media (max-width:500px) {
+  .landing-txt h1{
+    font-size: 40px;
+  }
+  .landing-txt .typing p, .landing-txt .typing span{
+    font-size: 30px;
+  }
+}
+@media (max-width:400px) {
+  .landing-txt h1{
+    font-size: 35px;
+  }
+  .landing-txt .typing p ,
+  .landing-txt .typing span{
+    font-size: 25px;
+  }
 }
 .landing-txt .typing{
   color: var(--button-color);
