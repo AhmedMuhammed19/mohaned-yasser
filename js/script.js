@@ -23,7 +23,7 @@ const phrases = [
 ];
 const el = document.getElementById("type-writer");
 
-let sleepTime = 100;
+let sleepTime = 150;
 
 let curPhraseIndex = 0;
 
