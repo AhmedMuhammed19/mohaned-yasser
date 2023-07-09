@@ -5,12 +5,12 @@ body {
 }
 :root {
   --landing-bg: #b1b1b1;
-  --main-color: #3C486B;
-  --secondary-color: #F45050;
-  --button-color: #F9D949;
-  --main-font-color: #F0F0F0;
-  --secondary-font-color: #e0e0e0;
-  --landing-after-bg:#3c486be1;
+  --main-color: #e4dccf;
+  --secondary-color: #f9f5eb;
+  --button-color: #ea5454df;
+  --main-font-color: #161827;
+  --secondary-font-color: #060047;
+  --landing-after-bg:#686868ed;
   --main-transition: 0.3s;
   
 }
@@ -147,6 +147,6 @@ opacity: 0;
   font-weight: 400;
 }
 .landing-txt .typing p{
-  margin-right: 15px;
+  margin-right: 1px;
 }
 /* end landing */
