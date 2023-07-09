@@ -33,6 +33,7 @@ a {
   height: 100vh;
   background-image: url(../images/landingbg.jpg);
   background-attachment:fixed ;
+  background-position: center;
 }
 .landing::after{
   content: "";
