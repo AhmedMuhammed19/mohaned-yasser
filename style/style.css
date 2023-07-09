@@ -14,8 +14,8 @@ body {
   
 }
 .dark {
-  --main-color: #161827;
-  --secondary-color: #060047;
+  --main-color: #121422;
+  --secondary-color: #161827;
   --button-color: #EA5455;
   --main-font-color: #e4dccf;
   --secondary-font-color: #f9f5eb;
@@ -29,8 +29,9 @@ a {
 .landing {
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
   background-image: url(../images/landing.jpg);
+  background-attachment:fixed ;
 }
 .landing::after{
   content: "";
@@ -39,6 +40,25 @@ a {
 height: 100%;
 background-color: var(--landing-after-bg);
 top: 0;
+}
+header{
+  position: fixed;
+  top: 0;
+  z-index: 50000;
+  width: 100%;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.landing header.scrolled{
+  background-color: var(--secondary-color);
+}
+
+nav ul{
+  position: sticky;
+  top:0;
 }
 nav ul {
   display: flex;
@@ -53,7 +73,14 @@ nav ul a {
   color: var(--main-font-color);
   font-size: 19px;
   font-weight: 500;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
 }
+
+
 @media (max-width: 776px) {
   nav ul a {
     font-size: 16px;
@@ -64,6 +91,9 @@ nav ul a {
   nav ul a {
     font-size: 14px;
   }
+}
+nav ul a.active ,nav ul a:hover {
+  color: var(--button-color);
 }
 .landing .night-mode{
   position: relative;
@@ -152,8 +182,11 @@ opacity: 0;
   animation: blink 0.5s linear infinite;
   -webkit-animation: blink 0.5s linear infinite;
 }
-
+section{
+   height: 100vh;
+}
 /* end landing */
+
 /* start animation */
 @keyframes blink {
   0%{
