@@ -10,12 +10,13 @@ body {
   --main-font-color: #161827;
   --secondary-font-color: #060047;
   --landing-after-bg:#e4dccf6c;
+  --section-padding:100px;
   --main-transition: 0.3s;
   
 }
 .dark {
-  --main-color: #121422;
-  --secondary-color: #161827;
+  --main-color: #161827;
+  --secondary-color: #050037;
   --button-color: #EA5455;
   --main-font-color: #e4dccf;
   --secondary-font-color: #f9f5eb;
@@ -24,6 +25,16 @@ body {
 a {
   text-decoration: none;
 }
+
+h2.main-heading{
+  color: var(--main-font-color);
+  font-size: 40px;
+  font-weight: 400;
+}
+h2.main-heading span{
+  font-weight: 700;
+}
+
 /* end global rules */
 /* start landing */
 .landing {
@@ -236,11 +247,54 @@ opacity: 0;
   animation: blink 0.5s linear infinite;
   -webkit-animation: blink 0.5s linear infinite;
 }
-section{
-   height: 100vh;
-}
-/* end landing */
 
+/* end landing */
+/* startAbout */
+.about{
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.about .container.about-section{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.about img{
+  max-width: 60%;
+flex-basis: 60%;
+  filter: grayscale(10%);
+  -webkit-filter: grayscale(10%);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.about img:hover { filter: none; -webkit-filter: none;
+}
+.about .container.about-section .content{
+  flex-basis:  40%;
+}
+@media (max-width:997px) {
+  .about .container.about-section{
+    flex-wrap: wrap;
+  }
+  .about .container.about-section img{
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .about .container.about-section .content{
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+.about .container.about-section p{
+  color: #060047;
+  font-weight: 300;
+  margin-top: 40px;
+  font-size: 20px;
+}
+/* endAbout */
 /* start animation */
 @keyframes blink {
   0%{
