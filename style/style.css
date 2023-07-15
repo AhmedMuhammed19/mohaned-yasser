@@ -266,10 +266,18 @@ nav ul a:hover {
   }
 }
 .about .img-holder {
-  margin-top: ;
-  max-width: 20%;
+  padding: 10px;
+  border: 3px solid var(--main-font-color);
+  max-width: 25%;
   border-radius: 50%;
   overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.about .img-holder img{
+  border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -283,22 +291,11 @@ nav ul a:hover {
     flex-direction: column;
   }
   .about .img-holder{
-    max-width: 40%;
+    max-width: 45%;
   }
   .about .about-section .content {
     max-width: 100%;
     text-align: center;
-  }
-}
-
-@media (max-width:500px) {
-
-  .about .img-holder{
-    max-width: 70%;
-  }
-  .about .about-section .content p{
-    line-height: 1.6;
-    letter-spacing: 1.8px;
   }
 }
 .about .about-section .content p{
@@ -308,6 +305,20 @@ nav ul a:hover {
   color: var(--secondary-font-color);
   font-size: 18px;
 }
+.about .about-section .content p span{
+font-weight: bold;
+}
+@media (max-width:500px) {
+
+  .about .img-holder{
+    max-width: 75%;
+  }
+  .about .about-section .content p{
+    line-height: 1.6;
+    letter-spacing: 1.8px;
+  }
+}
+
 /* endAbout */
 /* start animation */
 @keyframes blink {
