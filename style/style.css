@@ -266,6 +266,7 @@ nav ul a:hover {
   }
 }
 .about .img-holder {
+  margin-top: ;
   max-width: 20%;
   border-radius: 50%;
   overflow: hidden;
@@ -297,6 +298,8 @@ nav ul a:hover {
   }
 }
 .about .about-section .content p{
+  letter-spacing: 2px;
+  line-height: 1.9;
   margin-top: 40px;
   color: var(--secondary-font-color);
   font-size: 18px;
