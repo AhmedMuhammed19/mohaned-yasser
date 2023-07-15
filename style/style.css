@@ -289,12 +289,7 @@ nav ul a:hover {
     text-align: center;
   }
 }
-@media (max-width:776px) {
 
-  .about .img-holder{
-    max-width: 50%;
-  }
-}
 @media (max-width:500px) {
 
   .about .img-holder{
