@@ -296,6 +296,10 @@ nav ul a:hover {
   .about .img-holder{
     max-width: 70%;
   }
+  .about .about-section .content p{
+    line-height: 1.6;
+    letter-spacing: 1.8px;
+  }
 }
 .about .about-section .content p{
   letter-spacing: 2px;
