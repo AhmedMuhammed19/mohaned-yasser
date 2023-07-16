@@ -356,17 +356,12 @@ nav ul a:hover {
   color: var(--main-font-color);
   padding-bottom: 10px;
   font-size: 20px;
+  border-bottom: 2px solid var(--button-color);
+  width: fit-content;
+  margin: 0 auto 10px;
   font-weight: 700;
 }
-.about .experiences .container .experiences-container .experience h3::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 60px;
-  height: 2px;
-  background-color: var(--button-color);
-  left: 34%;
-}
+
 .about .experiences .experience p {
   color: var(--secondary-font-color);
   font-size: 18px;
