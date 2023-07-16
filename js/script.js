@@ -58,17 +58,15 @@ writeLoop();
 let sectionsScroll = document.querySelectorAll("section");
 let navLinksScroll = document.querySelectorAll(".landing nav a");
 
-document.addEventListener('scroll', () =>{
-  const header =document.querySelector('header');
+document.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
 
-if (window.scrollY>0){
-  header.classList.add('scrolled')
-}
-else{
-  header.classList.remove('scrolled')
-}
-})
-
+  if (window.scrollY > 0) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
 
 var sections = document.querySelectorAll("section");
 
@@ -118,3 +116,5 @@ navLinks.forEach((link) => {
     });
   });
 });
+
+

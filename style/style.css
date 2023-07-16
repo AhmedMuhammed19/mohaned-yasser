@@ -8,17 +8,17 @@ body {
   --secondary-color: #f9f5eb;
   --button-color: #ea5455;
   --main-font-color: #161827;
-  --secondary-font-color: #060047;
+  --secondary-font-color: #1a1c2fd5;
   --landing-after-bg: #e4dccf6c;
-  --section-padding: 100px;
+  --section-padding: 150px;
   --main-transition: 0.3s;
 }
 .dark {
   --main-color: #161827;
-  --secondary-color: #050037;
+  --secondary-color: #1a1c2f;
   --button-color: #ea5455;
   --main-font-color: #e4dccf;
-  --secondary-font-color: #f9f5eb;
+  --secondary-font-color: #f9f5ebb7;
   --landing-after-bg: #161827c4;
 }
 a {
@@ -251,17 +251,16 @@ nav ul a:hover {
 
 /* end landing */
 /* start About */
-.about {
-  padding: var(--section-padding) 0;
-}
+
 .about .about-section {
+  padding: var(--section-padding) 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
 }
-@media (max-width:997px) {
-  .about .about-section{
+@media (max-width: 997px) {
+  .about .about-section {
     flex-direction: column;
   }
 }
@@ -276,21 +275,21 @@ nav ul a:hover {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.about .img-holder img{
+.about .img-holder img {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.about .about-section .content{
+.about .about-section .content {
   max-width: 60%;
 }
-@media (max-width:997px) {
-  .about .about-section{
+@media (max-width: 997px) {
+  .about .about-section {
     flex-direction: column;
   }
-  .about .img-holder{
+  .about .img-holder {
     max-width: 45%;
   }
   .about .about-section .content {
@@ -298,28 +297,165 @@ nav ul a:hover {
     text-align: center;
   }
 }
-.about .about-section .content p{
+.about .about-section .content p {
   letter-spacing: 2px;
   line-height: 1.9;
   margin-top: 40px;
   color: var(--secondary-font-color);
   font-size: 18px;
 }
-.about .about-section .content p span{
-font-weight: bold;
+.about .about-section .content p span {
+  font-weight: bold;
 }
-@media (max-width:500px) {
-
-  .about .img-holder{
+@media (max-width: 500px) {
+  .about .img-holder {
     max-width: 75%;
   }
-  .about .about-section .content p{
+  .about .about-section .content p {
     line-height: 1.6;
     letter-spacing: 1.8px;
   }
 }
 
 /* endAbout */
+/* start experience and skills */
+
+.about .experiences {
+  background-color: var(--secondary-color);
+  padding: var(--section-padding) 0;
+}
+.about .experiences h2 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.about .experiences .container .experiences-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+.about .experiences .container .experiences-container .experience {
+  padding: 25px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.about .experiences .container .experiences-container .experience:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.about .experiences .container .experiences-container .experience h3 {
+  position: relative;
+  color: var(--main-font-color);
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.about .experiences .container .experiences-container .experience h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--button-color);
+  left: 34%;
+}
+.about .experiences .experience p {
+  color: var(--secondary-font-color);
+  font-size: 18px;
+}
+.skills {
+  padding: var(--section-padding) 0;
+}
+.skills h2 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.skills .skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.skills .skills-container .skill {
+  display: flex;
+  padding: 50px;
+  border-radius: 8px;
+  row-gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.skills .skill:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.skills .skills-container .skill .skill-name {
+  color: var(--main-font-color);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+.skills .skills-container .skill .circle {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills-container .skill .circle.photoshop {
+  background: conic-gradient(
+    var(--button-color) 357.7deg,
+    var(--main-font-color) 0deg
+  );
+}
+.skills .skills-container .skill .circle.illustrator {
+  background: conic-gradient(
+    var(--button-color) 310.25deg,
+    var(--main-font-color) 0deg
+  );
+}
+.skills .skills-container .skill .circle.xd {
+  background: conic-gradient(
+    var(--button-color) 292deg,
+    var(--main-font-color) 0deg
+  );
+}
+
+.skills .skills-container .skill .circle.indesign {
+  background: conic-gradient(
+    var(--button-color) 273.75deg,
+    var(--main-font-color) 0deg
+  );
+}
+.skills .circle::after {
+  content: "";
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
+.skill span {
+  font-size: 35px;
+  color: var(--secondary-font-color);
+  position: relative;
+  z-index: 900;
+}
+/* end experience and skills */
 /* start animation */
 @keyframes blink {
   0% {
