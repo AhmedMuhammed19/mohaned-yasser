@@ -451,6 +451,150 @@ nav ul a:hover {
   z-index: 900;
 }
 /* end experience and skills */
+/* start portofolio */
+.portofolio {
+  padding: var(--section-padding) 0;
+  background-color: var(--secondary-color);
+
+}
+.portofolio h2 {
+  margin-bottom: 80px;
+  text-align: center;
+}
+  .portofolio .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 20px;
+  }
+
+.portofolio .box {
+position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
+
+.portofolio .box img {
+  width: 100%;
+  height: 100%;
+}
+.portofolio .box .data {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition) ease;
+  -webkit-transition: var(--main-transition) ease;
+  -moz-transition: var(--main-transition) ease;
+  -ms-transition: var(--main-transition) ease;
+  -o-transition: var(--main-transition) ease;
+  opacity: 0;
+}
+.portofolio .box .data h3,
+.portofolio .box .data p,
+.portofolio .box .data a {
+  transform: translateY(25px);
+  -webkit-transform: translateY(25px);
+  -moz-transform: translateY(25px);
+  -ms-transform: translateY(25px);
+  -o-transform: translateY(25px);
+  transition: var(--main-transition) all ease;
+  -webkit-transition: var(--main-transition) all ease;
+  -moz-transition: var(--main-transition) all ease;
+  -ms-transition: var(--main-transition) all ease;
+  -o-transition: var(--main-transition) all ease;
+  opacity: 0;
+}
+.portofolio .box .data h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.portofolio .box .data p {
+  transition-delay: 0.1s;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.portofolio .box .data a{
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.portofolio .box .data a:hover{
+  color: var(--button-color);
+}
+.portofolio .box:hover .data h3,
+.portofolio .box:hover .data p,
+.portofolio .box:hover .data a {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  opacity: 1;
+}
+.portofolio .box:hover .data {
+  opacity: 1;
+}
+.portofolio>button{
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  margin-top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  height: 50px;
+  background-color: var(--button-color);
+  border: 0;
+  outline: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.portofolio>button:hover{
+  background-color: var(--main-font-color);
+}
+.portofolio button a{
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* end portofolio */
 /* start animation */
 @keyframes blink {
   0% {
@@ -460,4 +604,5 @@ nav ul a:hover {
     opacity: 0;
   }
 }
+
 /* end animation */
